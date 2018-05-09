@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+:root {
+  --primary: #a11698;
+  --primaryDark: #55255c;
+  --gray: #cfcfcf;
+  --darkgray: rgba(92, 92, 92, 0.25);
+  --light: #ffffff;
+  --shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Main Theme*/
+.themeButtonBold {
+  height: 50px;
+  width: 150px;
+  margin: 5px 0 !important;
+  border: var(--primary) 2px solid !important;
+}
+
+.themeButtonBold:hover {
+  height: 50px;
+  width: 150px;
+  background: var(--primary) !important;
+  color: var(--light) !important;
+  margin: 5px 0 !important;
+  border: var(--primary) 2px solid !important;
+}
+.themeButtonBlank {
+  color: var(--gray) !important;
+  border: none;
+  background: none;
+  font-weight: 200;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  padding: 15px;
+}
+.themeButtonBlank:hover {
+  background: none !important;
+}
+
+/*** Login ***/
+
+.login_wrapper {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary);
+}
+
+.login_box {
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  background: var(--light);
+  padding: 25px;
+  top: 0;
+  bottom: 0;
+  width: 50vw;
+  box-shadow: 0 0 20px 5px var(--darkgray);
+}
+
+.login_in {
+  position: absolute;
+  top: 50%;
+  max-width: 320px;
+  width: 100%;
+  transform: translate(0, -50%);
+}
+
+.login_box_header {
+  border-bottom: var(--primary) 2px solid;
+  display: inline !important;
+}
+
+.login_Link {
+  color: var(--gray);
+  text-decoration: none;
+  margin-right: 10px;
+  padding-right: 10px;
+  margin-top: 5px;
+  background: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.login_logo {
+  position: fixed;
+  z-index: 5;
+  right: 20px;
+  top: 20px;
+}
+
+.login_logo img {
+  width: 180px;
+}
+
+@media only screen and (max-width: 768px) {
+  .login_box {
+    width: 100vw;
+  }
+  .login_in {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Forgot Password */
+.ForgotPassword {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--light);
+  z-index: 2;
+}
+.ForgotPasswordBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 320px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+}
+.login_box_header_sub {
+  color: var(--gray) !important;
+  font-weight: 200 !important;
+}
+
+.ForgotPassword {
+  -webkit-animation-duration: 0.5s !important;
+  animation-duration: 0.5s !important;
+}
+
+/* Sidebar */
+.sidebarlogo {
+  display: block;
+  width: 100%;
+}
+.sidebarlogo img {
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 5px;
+}
+.sidebarNested {
+  padding-left: 50px !important;
+  color: var(--light);
+}
+.sidebarCollups {
+  background: var(--primaryDark);
+}
+.sidebarLink:hover {
+  background: var(--primary) !important;
+  color: var(--light);
+}
+.sidebarLinkOpen {
+  background: var(--primaryDark) !important;
+  color: var(--light) !important;
+}
+.sidebarLink:hover .material-icons,
+.sidebarLinkOpen .material-icons {
+  color: var(--light);
+}
+
+/* Dashboard */
+.dashWrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #1d90dd;
+}
+.dashSidebar {
+  width: 240px;
+}
+.dashBody {
+  width: calc(100% - 240px);
+  position: relative;
+  float: right;
+  background: #f7f7f7;
+  min-height: 100vh;
+}
+.dashToolbar {
+  box-shadow: none !important;
+}
+.dashToolbarTitle {
+  flex: 1;
+  font-weight: 200 !important;
+}
+.dashToolbarButton {
+  display: none !important;
+}
+.dashToolbarTitleUser {
+  font-size: 16px !important;
+  font-weight: 200 !important;
+}
+.dashToolbarMenu {
+  color: var(--light) !important;
+}
+.dashToolbarMenuItem {
+  margin-top: 48px;
+}
+
+.dashCointainer {
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 960px) {
+  .dashBody {
+    width: 100%;
+    position: relative;
+    float: inherit;
+    min-height: 100vh;
+  }
+  .dashToolbarButton {
+    display: block !important;
+  }
+}
+
+/* Dash Block */
+.dashBlockContent {
+  padding: 15px;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: var(--light);
+}
+.dashBlockTitle {
+  font-weight: 200 !important;
+}
+.dashBlockSub {
+  font-weight: 200 !important;
+  color: var(--gray) !important;
+}
